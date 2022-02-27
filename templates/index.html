@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <!-- Add Jumbotron to Header -->
       <div class="jumbotron text-center">
         <h1>Mission to Mars</h1>
@@ -57,6 +57,8 @@
 
       {% for hemisphere in mars.hemispheres %}
       <div class="col-md-3">
+        <!-- Add the extra clearfix for only the required viewport -->
+       <div class="clearfix visible-xs-block"></div>
         <div class="thumbnail">
           <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
           <div class="caption">
